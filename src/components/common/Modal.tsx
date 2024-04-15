@@ -34,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-30 flex items-center justify-center">
       <div
         ref={modalRef}
         className="bg-white flex flex-col justify-center items-center max-w-3xl  w-full p-6 rounded-lg shadow-lg"
