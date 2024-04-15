@@ -13,10 +13,10 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import ProductTour from '../components/common/ProductTour';
 
 const Home: React.FC = () => {
-  const [city, setCity] = useState<string>("");
+  const [city, setCity] = useState<string>("delhi");
   const [loading] = useState<boolean>(false);
   const [error] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const handleSearchHistory = (city: string) => {
     const existingHistoryJSON = localStorage.getItem("cities");
