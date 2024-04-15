@@ -42,9 +42,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         <div className="flex justify-between items-center mb-4 w-full">
           <Link
             to="/"
-            className="text-2xl font-bold text-black text-start px-5 sm:mb-0 flex w-full"
+            className="text-2xl font-bold  text-start px-5 sm:mb-0 flex w-full"
           >
-            M<span className="text-violet-500">ausom</span>
+            M<span className="text-violet-500">ausam</span>
           </Link>
           <button
             onClick={onClose}
