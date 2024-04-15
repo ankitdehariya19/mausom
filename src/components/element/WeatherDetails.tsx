@@ -59,7 +59,7 @@ const WeatherDetails: React.FC<WeatherDisplayProps> = ({ city }) => {
           <h2 className="text-4xl font-semibold mb-4 text-gray-800">Current Weather</h2>
           <div className="flex items-center mb-4">
             <img src={weatherData?.weatherIcon} alt={weatherData?.weatherDescription} className="w-16 h-16 mr-4" />
-            <p className="text-5xl font-bold text-gray-800">{weatherData?.temperature}°C</p>
+            <p className="text-3xl sm:text-4xl md:text-5xl  font-bold text-gray-800">{weatherData?.temperature}°C</p>
           </div>
           <p className="text-gray-900 font-bold text-lg mb-2">Description: {weatherData?.weatherDescription}</p>
         </div>
