@@ -61,7 +61,7 @@ export const getWeatherData = async (
       throw new Error('Unexpected API response format');
     }
 
-    const iconUrl = `http://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
+    const iconUrl = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
     const backgroundImage =
       weatherBackgrounds[currentData.weather[0].description.toLowerCase()] ||
       'url(https://images.unsplash.com/photo-1529528744093-6f8abeee511d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)';

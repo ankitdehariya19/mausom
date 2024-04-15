@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           <div>Error: {error}</div>
         ) : (
           <div>
-            <div className="pb-4 rounded-md  ">
+            <div className="pb-4 rounded-md min-h-screen max-h-full ">
           
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
               <LocationInfo onCitySelect={handleSearchHistory} />
