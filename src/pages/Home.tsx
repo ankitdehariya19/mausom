@@ -10,6 +10,7 @@ import Loader from "../components/element/Loader";
 import SearchHistory from "../components/common/SearchHistory";
 import Modal from "../components/common/Modal";
 import { HiMenuAlt3 } from "react-icons/hi";
+import ProductTour from '../components/common/ProductTour';
 
 const Home: React.FC = () => {
   const [city, setCity] = useState<string>("");
@@ -65,41 +66,41 @@ const Home: React.FC = () => {
   }, [searchHistory]);
 
   return (
-    <div className=" relative min-h-screen max-h-full max-w-7xl mx-auto bg-black rounded-md flex flex-col items-center border">
+    <div className="relative min-h-screen max-h-full max-w-7xl mx-auto bg-black rounded-md flex flex-col items-center border">
       <Header>
-      <button
+        <button
           onClick={() => setIsModalOpen(true)}
-          className="flex  rounded-md  gap-x-2 text-black text-xs p-3 mr-10 my-4  shadow-md duration-300 ease-in-out bg-white hover:bg-black hover:text-gray-100 focus:outline-none"
+          className="flex rounded-md gap-x-2 text-black text-xs p-3 mr-10 my-4 shadow-md duration-300 ease-in-out bg-white hover:bg-black hover:text-gray-100 focus:outline-none search-bar"
         >
           <HiMenuAlt3 />
         </button>
       </Header>
-      <div className="w-full bg-black  rounded-md shadow-md p-4 sm:p-8  min-h-screen max-h-full">
+      <div className="w-full bg-black rounded-md shadow-md p-4 sm:p-8 min-h-screen max-h-full">
         {loading ? (
           <Loader />
         ) : error ? (
           <div>Error: {error}</div>
         ) : (
           <div>
-            <div className="pb-4 rounded-md min-h-screen max-h-full ">
-          
+            <div className="pb-4 rounded-md weather-details min-h-screen max-h-full">
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-              <LocationInfo onCitySelect={handleSearchHistory} />
-                <SearchHistory
-                  searchHistory={searchHistory}
-                  setCity={setCity}
-                  clearSearchHistory={clearSearchHistory}
-                />
+                <div className="location-info">
+                  <LocationInfo onCitySelect={handleSearchHistory} />
+                </div>
+                <div className="search-history">
+                  <SearchHistory searchHistory={searchHistory} setCity={setCity} clearSearchHistory={clearSearchHistory} />
+                </div>
               </Modal>
               <WeatherDetails city={city} />
             </div>
-            <div className="overflow-x-auto ">
+            <div className="overflow-x-auto data-table">
               <DataTable handleSearchHistory={handleSearchHistory} />
             </div>
           </div>
         )}
       </div>
       <Footer />
+      <ProductTour />
     </div>
   );
 };
