@@ -82,7 +82,7 @@ export const getWeatherData = async (
           temperatureHigh: item.main.temp_max,
           temperatureLow: item.main.temp_min,
           weatherDescription: item.weather[0].description,
-          weatherIcon: `http://openweathermap.org/img/w/${item.weather[0].icon}.png`,
+          weatherIcon: `https://openweathermap.org/img/w/${item.weather[0].icon}.png`,
           precipitationChance: item.pop * 100,
         })),
       backgroundImage: backgroundImage,
