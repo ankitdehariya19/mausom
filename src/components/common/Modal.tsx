@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             to="/"
             className="text-2xl font-bold text-black text-start px-5 sm:mb-0 flex w-full"
           >
-            M<span className="text-violet-500">auson</span>
+            M<span className="text-violet-500">ausom</span>
           </Link>
           <button
             onClick={onClose}
