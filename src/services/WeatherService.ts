@@ -33,10 +33,10 @@ export const getWeatherData = async (
   try {
     const [currentResponse, forecastResponse] = await Promise.all([
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       ),
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       ),
     ]);
 
