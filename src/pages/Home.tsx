@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   const [city, setCity] = useState<string>("delhi");
   const [loading] = useState<boolean>(false);
   const [error] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const handleSearchHistory = (city: string) => {
     const existingHistoryJSON = localStorage.getItem("cities");
